@@ -1,0 +1,29 @@
+SFMalloc: A Lock-Free and Mostly Synchronization-Free Dynamic Memory Allocator 
+          for Manycores
+
+
+* Supported architecture
+x86 (64-bit)
+
+
+* Tested environment:
+Ubuntu 10.04 (64-bit)
+Red Hat Enterprise Linux Server release 5.5 (64-bit)
+
+
+* Compilation:
+SFMalloc is compiled with gcc. Since Makefile is provided, 
+you need to do only 'make' in this source directory.
+
+
+* Usage:
+1) If you want to link SFMalloc statically,
+  use libsfmalloc.a
+
+2) If you want to use SFMalloc with dynamic linking,
+  we recommend you use LD_PRELOAD environment variable.
+  For example, when you execute your application,
+
+  $ LD_PRELOAD=./libsfmalloc.so ./your_executable
+
+
